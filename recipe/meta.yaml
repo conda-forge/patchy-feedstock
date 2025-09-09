@@ -1,5 +1,5 @@
 {% set name = "patchy" %}
-{% set version = "2.9.0" %}
+{% set version = "2.10.0" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/patchy-{{ version }}.tar.gz
-  sha256: f4364bbe9d0281d12fe92690e79ef3c86c317294b3ae9d33405e7a4b6e8d9d5f
+  sha256: e7dc3610d20b8ce30af2ddbfa4a1ed67f066269fa6b10094f16dc798b80119da
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
