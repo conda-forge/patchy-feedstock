@@ -21,16 +21,19 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - setuptools >=77
+    - uv-build >=0.12.1,<0.13
   run:
     - python >=${{ python_min }}
+    - unipatch
 
 tests:
   - python:
       imports:
         - patchy
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Patch the inner source of python functions at runtime.
